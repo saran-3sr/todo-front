@@ -1,13 +1,136 @@
-body {
+body{
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h1
+{
+  margin: 0;
+  margin-bottom: 16px
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.App
+{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  min-height: 100vh;
+  border: solid 2px red;
+}
+.Todo-content
+{
+  width: 40%;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  padding: 18px;
+  background-color: rgb(255, 255, 255,0.6);
+}
+.App:before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left:0;
+  bottom: 0;
+  z-index: -1;
+  background-image: linear-gradient(45deg, #654ea3, #eaafc8);
+  transform: skewY(-9deg);
+}
+.todolist
+{
+  margin-top: 18px;
+}
+.todolist .todoele
+{
+  background-color: rgb(233, 101, 123);
+  height: 48px;
+  border-radius: 48px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.todolist .is-complete
+{
+  background-color: rgb(233, 101, 123);
+  height: 48px;
+  border-radius: 48px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+.todoele .checkbox
+{
+  height: 28px;
+  width: 28px;
+  background-color: pink;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+.is-complete .checkbox
+{
+  background-image: linear-gradient(90deg,#D81E5B,#8A4EFC);
+}
+.todoele .delete
+{
+  margin-right: 8px;
+  z-index: 1000;
+}
+
+.popup
+{
+  margin-top: 24px;
+  border: solid 2px red;
+}
+.popupplus
+{
+  cursor: pointer;
+}
+.closeplus
+{
+  display: none;
+}
+.closepop
+{
+  cursor: pointer;
+}
+.menu
+{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  border: solid 2px green;
+  margin: auto;
+}
+.menu input
+{
+  width: 70%;
+  height: 24px;
+}
+@media only screen and (max-width:900px) {
+  
+  .Todo-content{
+    width: 60%;
+  }
+}
+@media only screen and (max-width:500px) {
+  
+  .Todo-content{
+    width: 80%;
+  }
 }
