@@ -88,8 +88,9 @@ const Todo = () => {
 						<div className="menuform">
 							<form action="submit" className='menu' onSubmit={(e)=>{addTodo(e)}}>
 							<input type="text" onChange={(e)=>{setnewTodo(e.target.value)
-								console.log(e.target.value)}} value={newTodo} />
-							<button onClick={()=>addTodo()}>ADD TODO</button>
+								console.log(e.target.value)}} value={newTodo} placeholder="Add new Todo"/>
+								<div className="centplus"><AddIcon onClick={(e)=>addTodo(e)}/></div>
+							
 							</form>
 						</div>
 					</div>

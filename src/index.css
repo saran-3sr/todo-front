@@ -95,7 +95,6 @@ code {
 .popup
 {
   margin-top: 24px;
-  border: solid 2px red;
 }
 .popupplus
 {
@@ -112,15 +111,31 @@ code {
 .menu
 {
   display: flex;
-  width: 90%;
+  width: 80%;
   justify-content: center;
-  border: solid 2px green;
+  align-items: center;
   margin: auto;
+  background-color: white;
+  border-radius: 48px;
+  height:30px;
 }
 .menu input
 {
-  width: 70%;
+  width: 80%;
   height: 24px;
+  border: none;
+  background-color: white;
+}
+.menu input:focus
+{
+  outline: none;
+}
+.centplus
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 @media only screen and (max-width:900px) {
   
